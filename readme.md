@@ -1,9 +1,10 @@
 ### Fatec ZL - Centro Paula Souza
 ##### Disciplina - Programação Web III
-Grupo 1 
-Bruna Ciriaco Benedito
-Fernanda Gonçalves de Lima
-Vicente Santos Gonçalves
+Grupo 1 <br>
+Bruna Ciriaco Benedito<br>
+Fernanda Gonçalves de Lima<br>
+Flavia Correa de Moraes Cacau Alves<br>
+Vicente Santos Gonçalves<br>
 
 ##### Processo de Desenvolvimento de Software - PDS
 > O PDS segue uma abordagem interativa incremental. Cada atividade da interação tem uma definição de pronto estabelecida com objetivo de controlar a qualidade. 

@@ -19,17 +19,14 @@
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
 				<li><a th:href="@{/sig/cliente}">Cliente </a></li>
-				<li><a th:href="@{/sig/clinica}"> Clinica-agendamento </a></li>
-				<li><a th:href="@{/sig/processos}">Gestão de Processos </a></li>
-				<li><a href="#">Page 3</a></li>
+				<li><a th:href="@{/sig/produto}"> Produtos </a></li>
 				<li><a th:href="@{/login?logout}">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
 	<div class="container">
-		<h3>Centro Paula Souza - Curso de Análise e Desenvolvimento de
-			Sistemas</h3>
-		<p>2021 2o. Semestre.</p>
+		<h3>Centro Paula Souza - Curso de Desenvolvimento de Software Multiplataforma</h3>
+		<p>2021 3o. Semestre.</p>
 		<p th:inline="text">Usuário -
 			[[${#httpServletRequest.remoteUser}]]</p>
 	</div>

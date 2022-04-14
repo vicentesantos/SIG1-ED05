@@ -1,7 +1,7 @@
 package com.fatec.sig1.adapters;
 
-import java.util.Optional;
 import javax.validation.Valid;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
 import com.fatec.sig1.model.Cliente;
 import com.fatec.sig1.ports.MantemCliente;
 

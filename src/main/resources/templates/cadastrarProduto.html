@@ -48,14 +48,14 @@
 				</thead>
 				<tbody>
 					<tr th:each="produto : ${produtos}">
-						<td th:text="${produtos.id}"></td>
-						<td th:text="${produtos.cnpj}"></td>
-						<td th:text="$produtos.nome}"></td>
-						<td th:text="${produtos.dataValidade}"></td>
-						<td th:text="${produtos.marca}"></td>
-						<td th:text="${produtos.preco}"></td>
-						<td th:text="${produtos.especificacoes}"></td>
-						<td th:text="${produtos.dataCadastro}"></td>
+						<td th:text="${produto.id}"></td>
+						<td th:text="${produto.cnpj}"></td>
+						<td th:text="$produto.nome}"></td>
+						<td th:text="${produto.dataValidade}"></td>
+						<td th:text="${produto.marca}"></td>
+						<td th:text="${produto.preco}"></td>
+						<td th:text="${produto.especificacoes}"></td>
+						<td th:text="${produto.dataCadastro}"></td>
 						<td>
 							<div class="btn-group pull-right">
 								<a class="btn btn-sm btn-primary"

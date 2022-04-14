@@ -48,20 +48,20 @@
 				</thead>
 				<tbody>
 					<tr th:each="produto : ${produtos}">
-						<td th:text="${produtos.id}"></td>
-						<td th:text="${produtos.cnpj}"></td>
-						<td th:text="$produtos.nome}"></td>
-						<td th:text="${produtos.dataValidade}"></td>
-						<td th:text="${produtos.marca}"></td>
-						<td th:text="${produtos.preco}"></td>
-						<td th:text="${produtos.especificacoes}"></td>
-						<td th:text="${produtos.dataCadastro}"></td>
+						<td th:text="${produto.id}"></td>
+						<td th:text="${produto.cnpj}"></td>
+						<td th:text="$produto.nome}"></td>
+						<td th:text="${produto.dataValidade}"></td>
+						<td th:text="${produto.marca}"></td>
+						<td th:text="${produto.preco}"></td>
+						<td th:text="${produto.especificacoes}"></td>
+						<td th:text="${produto.dataCadastro}"></td>
 						<td>
 							<div class="btn-group pull-right">
 								<a class="btn btn-sm btn-primary"
-									th:href="@{/sig/produtos/{cnpj}(cnpj=${produto.cnpj})}">Editar</a>
+									th:href="@{/sig/produto/{cnpj}(cnpj=${produto.cnpj})}">Editar</a>
 								<a class="delete btn btn-sm btn-danger"
-									th:href="@{/sig/produtos/id/{id}(id=${produto.id})}">Excluir</a>
+									th:href="@{/sig/produto/id/{id}(id=${produto.id})}">Excluir</a>
 							</div>
 						</td>
 					</tr>

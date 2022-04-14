@@ -10,9 +10,8 @@ import com.fatec.sig1.model.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
-	Optional<Produto> findById(Long id);
+	Optional<Produto> findById(String id);
 
 	List<Produto> findAllByNomeIgnoreCaseContaining(String nome);
-
-	Optional<Produto> findByNome(String nome);
+	
 }

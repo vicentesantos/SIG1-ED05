@@ -19,15 +19,10 @@ public class MantemProdutoI implements MantemProduto {
 	@Autowired
 	ProdutoRepository repository;
 
+	@Override
 	public List<Produto> consultaTodos() {
 		logger.info(">>>>>> servico consultaTodos chamado");
 		return repository.findAll();
-	}
-
-	@Override
-	public Optional<Produto> consultaPorNome(String nome) {
-		logger.info(">>>>>> servico consultaPorNome chamado");
-		return repository.findByNome(nome);
 	}
 
 	@Override
@@ -38,17 +33,8 @@ public class MantemProdutoI implements MantemProduto {
 
 	@Override
 	public Optional<Produto> save(Produto produto) {
-		logger.info(">>>>>> servico save chamado");
-			Optional<Produto> umProduto = consultaPorNome(produto.getNome());
-			Object preco = null;
-			if (umProduto.isEmpty() & preco != null) {
-				logger.info(">>>>>> servico save - dados validos");
-				produto.obtemDataAtual(new DateTime());
-				produto.setPreco(0);
-				return Optional.ofNullable(repository.save(produto));
-			} else {
-				return Optional.empty();
-			}
+		logger.info(">>>>>> servico save chamado ");
+		return Optional.ofNullable(repository.save(produto));
 	}
 
 	@Override
@@ -61,17 +47,22 @@ public class MantemProdutoI implements MantemProduto {
 	public Optional<Produto> altera(Produto produto) {
 		logger.info(">>>>>> 1.servico altera produto chamado");
 		Optional<Produto> umProduto = consultaPorId(produto.getId());
-		Object preco = null;
-		//Endereco endereco = obtemEndereco(cliente.getCep());
-		if (umProduto.isPresent() & preco != null) {
-			Produto produtoModificado = new Produto();
+
+		if (umProduto.isPresent()) {
+			Produto produtoModificado = new Produto(produto.getNome(), produto.getPreco());
 			produtoModificado.setId(produto.getId());
+			produtoModificado.setQtdEstoque(produto.getQtdEstoque());
 			produtoModificado.obtemDataAtual(new DateTime());
-			produtoModificado.setEspecificacoes(produto.getEspecificacoes());
-			logger.info(">>>>>> 2. servico altera produto preco valido para o id => " + produtoModificado.getId());
 			return Optional.ofNullable(repository.save(produtoModificado));
 		} else {
 			return Optional.empty();
 		}
 	}
+
+	@Override
+	public Optional<Produto> consultaPorNome(String nome) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

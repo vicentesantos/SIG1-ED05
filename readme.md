@@ -62,13 +62,11 @@ Os seguintes requisitos foram identificados na primeira reunião com o cliente (
 > 
 As classes conceituais relacionadas aos requisitos para está interação foram identificadas no modelo de dominio. 
 
-![](modelo_de_dominio.jpg)
-
-
+![f1_modelo_de_dominio](https://user-images.githubusercontent.com/79234463/163399386-f7c982a9-852c-4917-a030-c72b2e79955b.jpg)
 
 Considerando requisitos de negócio que envolvem a utilização do sistema flexivel para os tipos de dispositivos de entrada (desktop, dispositivos moveis ou totens) a arquitetura segue o estilo Hexagonal  que isola o nucleo da aplicação (camada interna) da camada externa que é tudo que se comunica com a aplicação, banco de dados, serviços de e-mail e os controllers (RICHARDSON, 2018, p.38). A parte externa pode ser modificada de acordo com a necessidade melhorando a testabilidade do software considerando que as modificações na camada externa não impactam a camada interna devido ao seu isolamento. 
 
-![](diagrama3.jpg)
+![f2_arq_hexagonal](https://user-images.githubusercontent.com/79234463/163399437-1f461449-41f7-4d82-b3ab-65f55c0f280b.jpg)
 
 A arquitetura segue uma abordagem orientada a serviços. Os serviços foram classificados em três tipos (ERL, 2007):
 - **1. Serviços utilitários**. Implementam funcionalidades comuns a vários tipos de aplicações, como, por exemplo: log, notificação, transformação de informações. Um exemplo de serviço utilitário é um serviço de conversão de moeda que poderá ser acessado para calcular a conversão de uma moeda (por exemplo, dólares) para outra (por exemplo, euros).
@@ -78,9 +76,7 @@ A arquitetura segue uma abordagem orientada a serviços. Os serviços foram clas
 
 A visão lógica da arquitetura para API de Cliente é apresentada na figura abaixo. A visã lógica descreve como o código está organizado, as classes os pacotes e os relacionamentos entre eles. 
 
-
-![](diagrama1.jpg)
-
+![f3_visao_logica](https://user-images.githubusercontent.com/79234463/163399466-eff0aee2-e375-40b3-a7eb-9034eec6e875.jpg)
 
 >As operações da entidade Cliente identificada no modelo de dominio do SIG-VS são especificadas como um serviço que apoia o processo de venda. O contrato das operações de sistema devem ser definidos (LARMAN, 2006, pag 140). 
 

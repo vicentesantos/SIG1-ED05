@@ -94,6 +94,6 @@ public class Produto {
 
 
 
-	// equals e tostring omitidos. Cliado na aula de 05/04/2022
+	// equals e tostring omitidos.
 
 }

@@ -1,6 +1,6 @@
 ### Fatec ZL - Centro Paula Souza
 ##### Disciplina - Programação Web III
-Grupo 1 <br>
+**Grupo 1**  <br>
 Bruna Ciriaco Benedito<br>
 Fernanda Gonçalves de Lima<br>
 Flavia Correa de Moraes Cacau Alves<br>
@@ -13,10 +13,10 @@ graph TD;
 A(Concepção-análise de requisitos) --> B(Elaboração - projeto) --> C(Codificação - construção) --> D(Transição - teste e entrega) 
 ```
 
-- 1-Concepção – visão aproximada, casos de uso de negócio, escopo e estimativas vagas (fase de estudo de viabilidade)
-- 2-Elaboração – visão refinada, a arquitetura central é iterativamente implementada e os problemas de alto risco são mitigados, identificação da maioria dos requisitos e do escopo e estimativas mais realistas. 
+- 1 - Concepção – visão aproximada, casos de uso de negócio, escopo e estimativas vagas (fase de estudo de viabilidade)
+- 2 - Elaboração – visão refinada, a arquitetura central é iterativamente implementada e os problemas de alto risco são mitigados, identificação da maioria dos requisitos e do escopo e estimativas mais realistas.
 O projeto de software é iniciado logo que os requisitos de software tenham sido analisados e modelados e prepara a equipe para a transição entre a análise e o código. O projeto arquitetural define os relacionamentos entre os principais elementos estruturais do software (PRESSMAN, 6ed. p. 187). O projeto arquitetural pode ser apresentado na forma de múltiplas perspectivas. Krutchen (1995) sugere 4 visões: visão lógica, visão de implementação, visão de processo e visão de instalação. Adicionalmente as 4 visões existe os cenários que determinam a dinâmica e o comportamento da aplicação. Cada cenário descreve como os varios componentes arquiteturais colaboram para manipular uma operação de sistema. 
-- 3- Construção – mapeamento do projeto para o código, implementação iterativa dos elementos restantes de menor risco e preparação para implantação. 
+- 3 - Construção – mapeamento do projeto para o código, implementação iterativa dos elementos restantes de menor risco e preparação para implantação. 
 - 4 - Transição – beta testes e implantação 
 
 > A definição de "pronto" estabelece como a qualidade será atingida
@@ -60,26 +60,24 @@ Os seguintes requisitos foram identificados na primeira reunião com o cliente (
 
 ##### Elaboração - projeto
 
-> 
-As classes conceituais relacionadas aos requisitos para está interação foram identificadas no modelo de dominio. 
+> As classes conceituais relacionadas aos requisitos para está interação foram identificadas no modelo de dominio. 
 
 ![f1_modelo_de_dominio](https://user-images.githubusercontent.com/79234463/163399386-f7c982a9-852c-4917-a030-c72b2e79955b.jpg)
 
-Considerando requisitos de negócio que envolvem a utilização do sistema flexivel para os tipos de dispositivos de entrada (desktop, dispositivos moveis ou totens) a arquitetura segue o estilo Hexagonal  que isola o nucleo da aplicação (camada interna) da camada externa que é tudo que se comunica com a aplicação, banco de dados, serviços de e-mail e os controllers (RICHARDSON, 2018, p.38). A parte externa pode ser modificada de acordo com a necessidade melhorando a testabilidade do software considerando que as modificações na camada externa não impactam a camada interna devido ao seu isolamento. 
+> Considerando requisitos de negócio que envolvem a utilização do sistema flexivel para os tipos de dispositivos de entrada (desktop, dispositivos moveis ou totens) a arquitetura segue o estilo Hexagonal  que isola o nucleo da aplicação (camada interna) da camada externa que é tudo que se comunica com a aplicação, banco de dados, serviços de e-mail e os controllers (RICHARDSON, 2018, p.38). A parte externa pode ser modificada de acordo com a necessidade melhorando a testabilidade do software considerando que as modificações na camada externa não impactam a camada interna devido ao seu isolamento. 
 
 ![f2_arq_hexagonal](https://user-images.githubusercontent.com/79234463/163399437-1f461449-41f7-4d82-b3ab-65f55c0f280b.jpg)
 
-A arquitetura segue uma abordagem orientada a serviços. Os serviços foram classificados em três tipos (ERL, 2007):
+> A arquitetura segue uma abordagem orientada a serviços. Os serviços foram classificados em três tipos (ERL, 2007):
 - **1. Serviços utilitários**. Implementam funcionalidades comuns a vários tipos de aplicações, como, por exemplo: log, notificação, transformação de informações. Um exemplo de serviço utilitário é um serviço de conversão de moeda que poderá ser acessado para calcular a conversão de uma moeda (por exemplo, dólares) para outra (por exemplo, euros).
--**2. Serviços de entidade (serviços de negócios)**. Derivado de uma ou mais entidades de negócio (domínio), possuindo um alto grau de reutilização. Geralmente são serviços que fazem operações CRUD (Create, Read, Update e Delete). 
+- **2. Serviços de entidade (serviços de negócios)**. Derivado de uma ou mais entidades de negócio (domínio), possuindo um alto grau de reutilização. Geralmente são serviços que fazem operações CRUD (Create, Read, Update e Delete). 
+- **3. Serviços de tarefa (coordenação de processos-workflow)**. Tipo de serviço mais específico que possui baixo grau de reuso. Consome outros serviços para atender seus consumidores. São serviços que suportam um processo de negócios amplo que geralmente envolve atividades e atores diferentes. Um exemplo de serviço de coordenação em uma empresa é um serviço de pedidos em que os pedidos são feitos, os produtos são aceitos e os pagamentos são efetuados.
 
--**3. Serviços de tarefa (coordenação de processos-workflow)**. Tipo de serviço mais específico que possui baixo grau de reuso. Consome outros serviços para atender seus consumidores. São serviços que suportam um processo de negócios amplo que geralmente envolve atividades e atores diferentes. Um exemplo de serviço de coordenação em uma empresa é um serviço de pedidos em que os pedidos são feitos, os produtos são aceitos e os pagamentos são efetuados.
-
-A visão lógica da arquitetura para API de Cliente é apresentada na figura abaixo. A visã lógica descreve como o código está organizado, as classes os pacotes e os relacionamentos entre eles. 
+> A visão lógica da arquitetura para API de Cliente é apresentada na figura abaixo. A visã lógica descreve como o código está organizado, as classes os pacotes e os relacionamentos entre eles. 
 
 ![f3_visao_logica](https://user-images.githubusercontent.com/79234463/163399466-eff0aee2-e375-40b3-a7eb-9034eec6e875.jpg)
 
->As operações da entidade Cliente identificada no modelo de dominio do SIG-VS são especificadas como um serviço que apoia o processo de venda. O contrato das operações de sistema devem ser definidos (LARMAN, 2006, pag 140). 
+> As operações da entidade Cliente identificada no modelo de dominio do SIG-VS são especificadas como um serviço que apoia o processo de venda. O contrato das operações de sistema devem ser definidos (LARMAN, 2006, pag 140). 
 
 ```mermaid
 classDiagram
@@ -105,7 +103,7 @@ ClienteRepository -->> ClienteServiceI: ArrayList[]
 ClienteServiceI-->> APIClienteController: ArrayList[]
 APIClienteController -->> Usuario: ResponseEntity
 ```
->Referencias
+> Referencias
 - [1] KRUCHTEN, Philippe. Reference: Title: Architectural blueprints—the “4+ 1” view model of software architecture. IEEE software, v. 12, n. 6, 1995.
 - [2] RICHARDSON, Chris. Microservices patterns: with examples in Java. Simon and Schuster, 2018.
 - [3] ERL, Thomas. SOA principles of service design (the Prentice Hall service-oriented computing series from Thomas Erl). Prentice Hall PTR, 2007.

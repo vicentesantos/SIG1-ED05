@@ -68,6 +68,8 @@ public class Profissional {
 		DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/YYYY");
 		this.dataCadastro = dataAtual.toString(fmt);
 	}
+	public Profissional() {		
+    }
 	public Long getId() {
 		return id;
 	}

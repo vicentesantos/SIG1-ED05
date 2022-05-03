@@ -1,16 +1,45 @@
-form {
+.formi {
+	margin-left: 30px;
 	position: relative;
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
-	margin: 0 auto 100px;
+	margin-top: 32px;
 	padding: 45px;
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
 		rgba(0, 0, 0, 0.24);
+	
+}
+@media  screen and  (min-width:1674px) {
+	  .formi{
+		margin-left: 104px;
+		max-width: 32%;
+		margin-top: 102px;
+	  }
+	}
+	
+.image{
+	display: flex;
+	margin-top: -420px;
+	white-space: break-spaces;
+	margin-left: 40%;
 }
 
-form input {
+ @media (max-width: 1674px) {
+	.image {
+		margin-top: -425px;
+		white-space: break-spaces;
+		margin-left: 44%;
+	}
+}
+	
+.quadrado{
+	display: block;
+	margin-top: -18px;
+	padding: 2px;
+}
+.formi input {
 	font-family: "Roboto", sans-serif;
 	outline: 0;
 	background: #f2f2f2;
@@ -22,11 +51,11 @@ form input {
 	font-size: 14px;
 }
 
-form button {
+.formi button {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
-	background: #4CAF50;
+	background: rgb(106, 106, 106);
 	width: 100%;
 	border: 0;
 	padding: 15px;
@@ -37,22 +66,22 @@ form button {
 	cursor: pointer;
 }
 
-.form button:hover, .form button:active, .form button:focus {
-	background: #43A047;
+.formi button:hover, .formi button:active, .formi button:focus {
+	background: rgb(192, 192, 192);
 }
 
-.form .message {
+.formi .message {
 	margin: 15px 0 0;
-	color: #b3b3b3;
+	color: rgb(0, 0, 0);
 	font-size: 12px;
 }
 
-.form .message a {
-	color: #4CAF50;
+.formi .message a {
+	color: rgb(128, 128, 128);
 	text-decoration: none;
 }
 
-.form .register-form {
+.formi .register-form {
 	display: none;
 }
 
@@ -97,12 +126,13 @@ form button {
 }
 
 body {
-	background: #76b852; /* fallback for old browsers */
-	background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-	background: -moz-linear-gradient(right, #76b852, #8DC26F);
-	background: -o-linear-gradient(right, #76b852, #8DC26F);
-	background: linear-gradient(to left, #76b852, #8DC26F);
+	background: rgb(255, 255, 255); /* fallback for old browsers */
 	font-family: "Roboto", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.login-page{
+	height:50%;
+	width:50%;
 }

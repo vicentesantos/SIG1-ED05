@@ -11,13 +11,14 @@
 	<div th:if="${param.logout}">You have been logged out.</div>
 	<form th:action="@{/login}" method="post">
 		<div class="login-page">
-			<div class="form">
+		<img width="50%" th:src="@{/images/logo_copy.jpeg}"/>
+			<div class="formi">
 				<form>
 					<input type="text" name="username" placeholder="username" /> <input
 						type="password" name="password" placeholder="password" />
 					<button>login</button>
 					<p class="message">
-						Não cadastrado? <a href="#">Crie uma conta</a>
+						Não cadastrado? <a th:href="@{/sig/cliente}">Crie uma conta</a>
 					</p>
 					<input type="hidden" th:name="${_csrf.parameterName}"
 						th:value="${_csrf.token}" />
@@ -25,5 +26,12 @@
 			</div>
 		</div>
 	</form>
+	<div class="image" width="50%" height="50%"> 
+		<div class= "quadrado">
+			<img width="400px" height="200px" th:src="@{/images/01.jpg}"/>
+			<img width="400px" height="200px" th:src="@{/images/03.jpg}"/>
+		</div>
+		<img width="200px" height="410px" th:src="@{/images/Imagem02.jpg}"/>
+	</div>
 </body>
 </html>

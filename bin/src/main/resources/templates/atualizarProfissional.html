@@ -1,12 +1,12 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Atualizar cliente</title>
+<title>Atualizar Profissional</title>
 <script type="text/javascript">
 function consulta() {
-window.open("/sig/clientes");
+window.open("/sig/profissionais");
 }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,19 +25,19 @@ window.open("/sig/clientes");
 <body>
 	<div class="container my-5">
 		<br />
-		<h3>Atualizar Cliente</h3>
+		<h3>Atualizar Profissional</h3>
 		<div class="card">
 			<div class="card-body">
 				<div class="col-md-8">
 					<form action="#"
-						th:action="@{/sig/clientes/id/{id} (id=${cliente.id}) }"
-						th:object="${cliente}" method="post">
+						th:action="@{/sig/profissionais/id/{id} (id=${profissional.id}) }"
+						th:object="${profissional}" method="post">
 						<div class="row">
 							<div class="form-group col-md-4">
-								<label for="cpf" class="col-form-label">CPF</label> <input
-									type="text" th:field="*{cpf}" class="form-control" id="cpf"
-									placeholder="cpf" required> <span
-									th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"
+								<label for="cnpj" class="col-form-label">CNPJ</label> <input
+									type="text" th:field="*{cnpj}" class="form-control" id="cnpj"
+									placeholder="cnpj" required> <span
+									th:if="${#fields.hasErrors('cnpj')}" th:errors="*{cnpj}"
 									class="text-danger"> </span>
 							</div>
 						</div>
@@ -73,7 +73,7 @@ window.open("/sig/clientes");
 									type="text" th:field="*{endereco}" class="form-control"
 									id="endereco" placeholder="endereco" readonly required> <span
 									th:if="${#fields.hasErrors('endereco')}"
-									th:errors="*{endereco}" class="textdanger"></ span> 
+									th:errors="*{endereco}" class="textdanger"></span> 
 							</div>
 							<div class="form-group col-md-8">
 								<label for="complemento" class="col-form-label">Complemento</label>
@@ -84,8 +84,8 @@ window.open("/sig/clientes");
 							</div>
 							<div class="form-group col-md-8">
 								<input type="submit" class="btn btn-primary"
-									value="Atualizar Cliente"> <input type="button"
-									class="btn btn-primary" value="Consultar Cliente"
+									value="Atualizar Profissional"> <input type="button"
+									class="btn btn-primary" value="Consultar Profissional"
 									onclick="consulta();">
 							</div>
 						</div>

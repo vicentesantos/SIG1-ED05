@@ -35,16 +35,16 @@ window.open("/sig/clientes");
 							<div class="form-group col-md-4">
 								<label for="cpf" class="col-form-label">CPF</label> <input
 									type="text" th:field="*{cpf}" class="form-control" id="cpf"
-									placeholder="CPF"> <span
+									placeholder="CPF" required> <span
 									th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"
-									class="text-danger"> </span>
+									class="text-danger" > </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group col-md-8">
 								<label for="nome" class="col-form-label">Nome</label> <input
 									type="text" th:field="*{nome}" class="form-control" id="nome"
-									placeholder="Nome"> <span
+									placeholder="Nome" required> <span
 									th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
 									class="text-danger"> </span>
 							</div>
@@ -54,7 +54,7 @@ window.open("/sig/clientes");
 								<label for="dataNascimento" class="col-form-label">Data
 									Nascimento</label> <input type="text" th:field="*{dataNascimento}"
 									class="form-control" id="dataNascimento"
-									placeholder="Data Nascimento"> <span
+									placeholder="Data Nascimento" required> <span
 									th:if="${#fields.hasErrors('dataNascimento')}"
 									th:errors="*{dataNascimento}" class="text-danger"> </span>
 							</div>
@@ -63,7 +63,7 @@ window.open("/sig/clientes");
 							<div class="form-group col-md-2">
 								<label for="dataNascimento" class="col-form-label">Sexo</label>
 								<input type="text" th:field="*{sexo}" class="form-control"
-									id="sexo" placeholder="M/F"> <span
+									id="sexo" placeholder="M/F" required> <span
 									th:if="${#fields.hasErrors('sexo')}" th:errors="*{sexo}"
 									class="text-danger"> </span>
 							</div>
@@ -72,7 +72,7 @@ window.open("/sig/clientes");
 							<div class="form-group col-md-8">
 								<label for="cep" class="col-form-label">CEP</label> <input
 									type="text" th:field="*{cep}" class="form-control" id="cep"
-									placeholder="CEP"> <span
+									placeholder="CEP" required> <span
 									th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"
 									class="text-danger"></span>
 							</div>

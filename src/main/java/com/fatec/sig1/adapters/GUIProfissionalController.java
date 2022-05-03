@@ -40,7 +40,7 @@ public class GUIProfissionalController {
 	@GetMapping("/profissionais/{cnpj}") // diz ao metodo que ira responder a uma requisicao do tipo get
 	public ModelAndView retornaFormParaEditarProfissional(@PathVariable("cnpj") String cnpj) {
 		ModelAndView modelAndView = new ModelAndView("atualizarProfissional");
-		modelAndView.addObject("profissional", servico.consultaPorCnpj(cnpj).get()); // retorna um objeto do tipo cliente
+		modelAndView.addObject("profissional", servico.consultaPorCnpj(cnpj).get()); // retorna um objeto do tipo profissional
 		return modelAndView; // addObject adiciona objetos para view
 	}
 
@@ -78,7 +78,7 @@ public class GUIProfissionalController {
 		if (result.hasErrors()) {
 			logger.info(">>>>>> servico para atualizacao de dados com erro => " + result.getFieldError().toString());
 			profissional.setId(id);
-			return new ModelAndView("atualizarCliente");
+			return new ModelAndView("atualizarProfissional");
 		} else {
 			servico.altera(profissional);
 			modelAndView.addObject("profissional", servico.consultaTodos());

@@ -38,7 +38,7 @@ public class Profissional {
 	@NotBlank(message = "O complemento deve ser informado")
 	private String complemento;
 
-	public void Cliente(String nome, String dataNascimento, String sexo, String cnpj, String cep, String complemento) {
+	public Profissional (String nome, String dataNascimento, String sexo, String cnpj, String cep, String complemento) {
 		this.nome = nome;
 		setDataNascimento(dataNascimento);
 		this.sexo = sexo;
@@ -46,6 +46,7 @@ public class Profissional {
 		this.cep = cep;
 		this.complemento = complemento;
 	}
+	
 	public void setDataNascimento(String dataNascimento) {
 		if (validaData(dataNascimento) == true) {
 			this.dataNascimento = dataNascimento;

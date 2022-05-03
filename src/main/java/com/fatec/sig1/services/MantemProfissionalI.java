@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
+
 import com.fatec.sig1.model.Profissional;
 import com.fatec.sig1.model.Endereco;
-
 import com.fatec.sig1.ports.ProfissionalRepository;
 import com.fatec.sig1.ports.MantemProfissional;
 
@@ -67,7 +67,8 @@ public class MantemProfissionalI implements MantemProfissional {
 		Optional<Profissional> umProfissional = consultaPorId(profissional.getId());
 		Endereco endereco = obtemEndereco(profissional.getCep());
 		if (umProfissional.isPresent() & endereco != null) {
-			Profissional profissionalModificado = new Profissional();
+			Profissional profissionalModificado = new Profissional(profissional.getNome(), profissional.getDataNascimento(), profissional.getSexo(),
+					profissional.getCnpj(), profissional.getCep(), profissional.getComplemento());
 			profissionalModificado.setId(profissional.getId());
 			profissionalModificado.obtemDataAtual(new DateTime());
 			profissionalModificado.setEndereco(endereco.getLogradouro());

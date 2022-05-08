@@ -39,9 +39,11 @@
 						<tr>
 							<th>ID</th>
 							<th>Nome</th>
-							<th>Preço</th>
-							<th>Dt.Cadastro</th>
+							<th>Código de Barras</th>
+							<th>Marca</th>
+							<th>Descrição</th>							
 							<th>Qtd.Estoque</th>
+							<th>Preço</th>
 
 						</tr>
 					</thead>
@@ -49,10 +51,12 @@
 						<tr th:each="produto : ${produtos}">
 							<td th:text="${produto.id}"></td>
 							<td th:text="${produto.nome}"></td>
-							<td th:text="${produto.preco}"></td>
-							<td th:text="${produto.dataCadastro}"></td>
+							<td th:text="${produto.codBarras}"></td>
+							<td th:text="${produto.marca}"></td>
+							<td th:text="${produto.descricao}"></td>
 							<td th:text="${produto.qtdEstoque}"></td>
-
+							<td th:text="${produto.preco}"></td>
+							
 							<td>
 								<div class="btn-group pull-right">
 									<a class="btn btn-sm btn-primary"

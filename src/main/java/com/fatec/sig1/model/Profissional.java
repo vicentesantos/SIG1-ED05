@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.br.CPF;
+import org.hibernate.validator.constraints.br.CNPJ;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -29,7 +29,7 @@ public class Profissional {
 	private String dataNascimento;
 	private String dataCadastro;
 	private String sexo;
-	@CPF
+	@CNPJ
 	@Column(unique = true) // nao funciona com @Valid tem que tratar na camada de persistencia
 	private String cnpj;
 	@NotBlank(message = "O CEP é obrigatório.")

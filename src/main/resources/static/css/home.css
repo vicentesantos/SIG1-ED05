@@ -1,7 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg, .w3-display-container {
-  background-image: url('/images/fundo.jpeg');
+  background-image: url('/images/fundo.png');
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -44,7 +47,7 @@ body, html {height: 100%}
 	width:100%;
 	list-style:none;
 	float:left;
-	color:#FFFF;
+	color:rgb(255, 255, 255);
 	margin-top: 70px;
 }
 
@@ -58,9 +61,62 @@ body, html {height: 100%}
 	color:rgb(255, 255, 255); 
 	text-decoration:none; 
 	display:block;
+	font-size: 20px;
 }
 
 .menu li a:hover{
-color:#fff;
-text-shadow:0px 0px 5px #fff;
+	color:rgb(255, 255, 255);
+	text-shadow:0px 0px 5px #fff;
+}
+
+.tela-scroll{
+	height:100vh;
+	width:100%;
+}
+
+#cliente{
+	margin-top:5%;
+	background-color: #FFFF; 
+	width:100%;
+	height:100%
+	 
+}
+
+.text{
+	font-size: 30px;
+	text-align: center;
+	padding:90px;
+}
+
+.img_cliente{
+	margin-top:30px;
+	margin-left: 70%;
+	position: relative;
+	display:flex;
+	
+}
+
+.cadastra_cliente{
+	border-radius: 10px;
+	border-color: rgb(0, 0, 0);
+  	color: #fff;
+  	border-style: none;
+  	box-shadow: 0 0 40px 40px rgb(128, 128, 128) inset, 0 0 0 0 rgb(192, 192, 192);
+  	-webkit-transition: all 150ms ease-in-out;
+  	transition: all 150ms ease-in-out;
+  	margin-top: 10%;
+	margin-left: 45%;
+	text-align: center;
+	padding:10px;
+}
+
+.cadastra_cliente:hover{
+	color:black;
+	box-shadow: 0 0 10px 0 rgb(128, 128, 128) inset, 0 0 10px 4px rgb(192, 192, 192);
+}
+#profissional{
+	background-color: rgb(128, 128, 128); 
+	width:100%;
+	
+	
 }

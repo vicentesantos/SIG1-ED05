@@ -15,23 +15,47 @@
 	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 		<div class="w3-display-middle">
 			<h1 class="w3-jumbo w3-animate-top">Les Mustaches Barbearia</h1>
-			<button type="button" class="button"> <img src="https://img.icons8.com/ios/30/ffffff/calendar-plus.png"
-					class="celendario" />
-				Agenda Online</button>
+			<button type="button" class="button">
+				<img src="https://img.icons8.com/ios/30/ffffff/calendar-plus.png" class="celendario" />
+				Agenda Online
+			</button>
 			<p class="w3-large w3-center"> Viva o conforto e o bem estar de cuidar da você</p>
 		</div>
 		<div class="w3-display-bottomleft w3-padding-large">
-			<div class="menu">
+			<nav class="menu">
 				<ul class="menu">
 					<li class="active"><a href="#">Home</a></li>
-					<li class="active"><a th:href="@{/sig/cliente}">Clientes </a></li>
-					<li><a th:href="@{/sig/profissional}">Profissional</a></li>
-					<li><a th:href="@{/sig/produto}">Produtos</a></li>
-					<li><a th:href="@{/sig/servico}">Serviços</a></li>
+					<li class="active"><a href="#cliente">Clientes </a></li>
+					<li><a href="#profissional">Profissional</a></li>
+					<li><a th:href="@{produto}">Produtos</a></li>
+					<li><a th:href="@{servico}">Serviços</a></li>
 
 				</ul>
-			</div>
+			</nav>
 		</div>
 	</div>
+	<div class="tela-scroll">
+			<section id="cliente">
+				<span class="text">
+					<h1> Clietes </h1>
+					<p> Aqui colocamos nossa cliente em primeiro lugar</p>
+					<p> quem opta por ser nosso ciente tem o beneficio de escolher sua data,</p>
+					<p> e o Profissional que ira produzir esta função</p>
+					<button class="cadastra_cliente" th:src="@{sig/Cliente}">Cadastre-se</button>
+					<img class="img_cliente"th:src="@{/images/logo_copy.jpeg}"/>
+				</span>
+			</section>
+			<section id="profissional">
+				<span class="text">
+					<h1>Profissional</h1>
+					<p> Aqui colocamos nossa cliente em primeiro lugar</p>
+					<p> quem opta por ser nosso ciente tem o beneficio de escolher sua data,</p>
+					<p> e o Profissional que ira produzir esta função</p>
+					<p><button class="cadastra">Cadastre-se</button></p>
+					<p class="img_cliente"> <img th:src="@{/images/logo_copy.jpeg}"/></p>
+				</span>
+			</section>
+			<section id="truth"></section>
+			<section id="all-css"></section>
 	</div>
 </body>
